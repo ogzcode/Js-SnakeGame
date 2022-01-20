@@ -1,2 +1,4 @@
 # Js-SnakeGame
-Canvas API kullanarak geliştirdiğim yılan oyunu.
+Snake game I developed using Canvas API.
+Only tested in Chrome.
+
