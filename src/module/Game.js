@@ -60,13 +60,13 @@ export class Game {
         bestNode.innerText = `Best Score : ${this.bestScore}`;
     }
     
-    frame(cx){
-        cx.clearRect(0, 0, this.CANVAS_WIDTH, this.CANVAS_HEIGHT);
+    frame(){
+        this.context.clearRect(0, 0, this.CANVAS_WIDTH, this.CANVAS_HEIGHT);
         this.snake.update();
-        this.snake.draw(cx);
-        this.apple.draw(cx);
+        this.snake.draw(this.context);
+        this.apple.draw(this.context);
         this.collisionControl();
-        this.draw_grid(cx);
+        this.draw_grid();
         this.scoreText(this.snake.tail - 2);
     }
 
