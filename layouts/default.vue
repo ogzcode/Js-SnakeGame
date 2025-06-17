@@ -4,9 +4,9 @@ import TableOfContents from '~/components/layout/TableOfContents.vue';
 </script>
 
 <template>
-    <div class="bg-white min-h-screen flex">
+    <div class="bg-white dark:bg-gray-900 min-h-screen flex">
         <!-- Sol Sidebar - Ana Navigasyon -->
-        <div class="w-64 bg-gray-50 border-r border-gray-200 fixed left-0 top-0 h-full overflow-y-auto z-10">
+        <div class="w-64 bg-gray-50 dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 fixed left-0 top-0 h-full overflow-y-auto z-10">
             <Sidebar />
         </div>
         
@@ -18,7 +18,7 @@ import TableOfContents from '~/components/layout/TableOfContents.vue';
         </div>
         
         <!-- Sağ Sidebar - Sayfa İçi Navigasyon -->
-        <div class="w-64 bg-gray-50 border-l border-gray-200 fixed right-0 top-0 h-full overflow-y-auto z-10">
+        <div class="w-64 bg-gray-50 dark:bg-gray-800 border-l border-gray-200 dark:border-gray-700 fixed right-0 top-0 h-full overflow-y-auto z-10">
             <TableOfContents />
         </div>
     </div>

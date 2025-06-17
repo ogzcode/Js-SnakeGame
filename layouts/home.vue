@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white min-h-screen">
+    <div class="bg-white dark:bg-gray-900 min-h-screen">
         <!-- Ana İçerik Alanı - Sidebar yok -->
         <main class="container mx-auto px-6 py-8">
             <slot />
