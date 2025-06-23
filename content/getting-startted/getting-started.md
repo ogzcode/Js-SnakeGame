@@ -1,74 +1,74 @@
 ---
-title: Başlangıç Rehberii
-description: Bu dokümantasyon sistemi Nuxt Content kullanarak oluşturulmuştur.
-category: Başlangıç
+title: Getting Started
+description: This documentation system is created using Nuxt Content.
+category: Getting Started
 order: 1
 ---
 
-# Başlangıç Rehberi
+# Getting Started
 
-Bu dokümantasyon sistemi **Nuxt Content** kullanarak oluşturulmuştur.
+This documentation system is created using **Nuxt Content**.
 
-## Kurulum
+## Setup
 
-Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları takip edin:
+To run the project on your local machine, follow the steps below:
 
-### Gereksinimler
+### Requirements
 
-- Node.js 18+ sürümü
-- npm veya yarn paket yöneticisi
+- Node.js 18+ version
+- npm or yarn package manager
 - Git
 
-### Adım Adım Kurulum
+### Step by Step Setup
 
-1. Repository'yi klonlayın
-2. Bağımlılıkları yükleyin
-3. Geliştirme sunucusunu başlatın
+1. Clone the repository
+2. Install dependencies
+3. Start the development server
 
-## Özellikler
+## Features
 
-### Ana Özellikler
+### Main Features
 
-- ✅ Markdown dosyalarını otomatik render etme
-- ✅ Modern ve responsive tasarım
-- ✅ SEO dostu yapı
-- ✅ Kolay navigasyon
-- ✅ Dinamik sayfa içi navigasyon
+- ✅ Automatic rendering of markdown files
+- ✅ Modern and responsive design
+- ✅ SEO friendly structure
+- ✅ Easy navigation
+- ✅ Dynamic page-internal navigation
 
-### Gelişmiş Özellikler
+### Advanced Features
 
-- Otomatik table of contents
-- Smooth scroll navigasyon
+- Automatic table of contents
+- Smooth scroll navigation
 - Active section highlighting
-- Responsive sidebar tasarım
+- Responsive sidebar design
 
-## Nasıl Kullanılır
+## How to Use
 
-### İçerik Ekleme
+### Adding Content
 
-1. `content/` klasörüne yeni markdown dosyaları ekleyin
-2. Ana sayfada otomatik olarak listelenecektir
-3. Her sayfa kendi URL'sine sahip olacaktır
+1. Add new markdown files to the `content/` folder
+2. It will be automatically listed on the main page
+3. Each page will have its own URL
 
-### Markdown Formatı
+### Markdown Format
 
-Markdown dosyalarınızın başında frontmatter ekleyin:
+Add frontmatter to the beginning of your markdown files:
 
 ```yaml
 ---
-title: Sayfa Başlığı
-description: Sayfa açıklaması
+title: Page Title
+description: Page description
 ---
 ```
 
-## Kod Örneği
+## Code Example
 
 ```javascript
-const example = "Bu bir kod örneğidir";
+const example = "This is a code example";
 console.log(example);
 ```
 
-### TypeScript Desteği
+### TypeScript Support
 
 ```typescript
 interface User {
@@ -77,13 +77,13 @@ interface User {
 }
 
 const user: User = {
-  name: "Örnek Kullanıcı",
-  email: "ornek@email.com"
+  name: "Example User",
+  email: "example@email.com"
 };
 ```
 
-## Sonuç
+## Result
 
-> **Not:** Bu sistem TypeScript ve TailwindCSS ile geliştirilmiştir.
+> **Note:** This system is developed with TypeScript and TailwindCSS.
 
-İyi çalışmalar! 🚀 
+Good luck! 🚀 

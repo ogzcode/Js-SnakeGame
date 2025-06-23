@@ -1,24 +1,24 @@
 ---
-title: API Referansı
-description: Bu bölümde mevcut API endpoint'lerini bulabilirsiniz.
+title: API Reference
+description: This section contains the current API endpoints.
 category: API
 order: 2
 ---
 
-# API Referansı
+# API Reference
 
-Bu bölümde mevcut API endpoint'lerini bulabilirsiniz.
+This section contains the current API endpoints.
 
-## Temel Endpoint'ler
+## Basic Endpoints
 
 ### GET /api/users
-Tüm kullanıcıları getirir.
+Get all users.
 
-**Parametreler:**
-- `limit` (optional): Sayfa başına kayıt sayısı
-- `offset` (optional): Başlangıç noktası
+**Parameters:**
+- `limit` (optional): Number of records per page
+- `offset` (optional): Start point
 
-**Örnek Response:**
+**Example Response:**
 ```json
 {
   "users": [
@@ -33,7 +33,7 @@ Tüm kullanıcıları getirir.
 ```
 
 ### POST /api/users
-Yeni kullanıcı oluşturur.
+Create a new user.
 
 **Body:**
 ```json
@@ -43,20 +43,20 @@ Yeni kullanıcı oluşturur.
 }
 ```
 
-## Kimlik Doğrulama
+## Authentication
 
-API'yi kullanmak için `Authorization` header'ına Bearer token eklemeniz gerekir:
+To use the API, you need to add the `Authorization` header with the Bearer token:
 
 ```bash
 curl -H "Authorization: Bearer YOUR_TOKEN" \
      https://api.example.com/users
 ```
 
-## Hata Kodları
+## Error Codes
 
-| Kod | Açıklama |
+| Code | Description |
 |-----|----------|
-| 400 | Geçersiz istek |
-| 401 | Yetkilendirme hatası |
-| 404 | Kaynak bulunamadı |
-| 500 | Sunucu hatası | 
+| 400 | Invalid request |
+| 401 | Authorization error |
+| 404 | Resource not found |
+| 500 | Server error | 

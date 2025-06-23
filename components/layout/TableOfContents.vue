@@ -51,7 +51,7 @@ watch(() => route.path, () => {
   <div class="p-4 lg:p-6 border border-t-0 border-dashed border-gray-200 dark:border-gray-700">
     <!-- Başlık -->
     <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
-      İçindekiler
+        Table of Contents
     </h3>
     
     <nav v-if="tocItems.length > 0" class="space-y-1">
@@ -66,7 +66,7 @@ watch(() => route.path, () => {
             ? 'text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/50 font-medium border-l-2 border-blue-600 dark:border-blue-400' 
             : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700/50'
         ]"
-        :aria-label="`${item.text} bölümüne git`"
+        :aria-label="`Go to ${item.text}`"
         tabindex="0"
         @click="handleSectionClick(item.anchor, $event)"
         @keydown="handleKeyDown(item.anchor, $event)"
@@ -77,7 +77,7 @@ watch(() => route.path, () => {
     
     <!-- Boş durumda gösterilecek -->
     <div v-else class="text-sm text-gray-500 dark:text-gray-400">
-      Bu sayfada başlık bulunmuyor.
+      No headings found in this page.
     </div>
   </div>
 </template> 

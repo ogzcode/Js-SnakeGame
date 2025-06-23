@@ -20,7 +20,7 @@ const handleMenuKeyDown = (event: KeyboardEvent) => {
                 <div class="flex items-center space-x-4">
                     <button
                         class="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
-                        aria-label="Menüyü aç/kapat"
+                        aria-label="Open/Close menu"
                         tabindex="0"
                         @click="handleMenuClick"
                         @keydown="handleMenuKeyDown"
@@ -31,7 +31,7 @@ const handleMenuKeyDown = (event: KeyboardEvent) => {
                     </button>
                     
                     <div class="font-semibold text-gray-900 dark:text-white">
-                        Dokümantasyon
+                        Documentation
                     </div>
                 </div>
                 

@@ -67,7 +67,7 @@ onUnmounted(() => {
             </div>
 
             <div class="flex-1 min-w-0">
-                <main class="max-w-4xl mx-auto px-6 py-8">
+                <main class="max-w-4xl mx-auto py-4 px-6">
                     <slot />
                 </main>
             </div>

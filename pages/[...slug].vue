@@ -26,21 +26,7 @@ useSeoMeta({
 
 <template>
     <div class="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
-        <div class="max-w-4xl mx-auto p-6">
-            <div class="mb-6 flex justify-between items-center">
-                <NuxtLink 
-                    to="/"
-                    class="inline-flex items-center text-gray-600 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-200 transition-colors duration-200"
-                    tabindex="0"
-                    aria-label="Ana sayfaya dön"
-                    @keydown.enter="$router.push('/')"
-                >
-                    <Icon name="heroicons:arrow-left" class="w-4 h-4 mr-2" />
-                    Ana Sayfaya Dön
-                </NuxtLink>
-                <ThemeSwitcher />
-            </div>
-
+        <div class="max-w-4xl mx-auto px-6 py-0">
             <article class="prose prose-lg max-w-none">
                 <ContentRenderer 
                     v-if="page" 

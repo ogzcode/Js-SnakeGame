@@ -9,12 +9,12 @@ const groupedContent = computed(() => {
   
   navigation.value.forEach((page: any) => {
     const pathParts = page.path.split('/')
-    const folderName = pathParts.length > 1 ? pathParts[1] : 'Ana Sayfa'
+    const folderName = pathParts.length > 1 ? pathParts[1] : 'Home'
     
     let displayName = folderName
     switch (folderName) {
       case 'getting-startted':
-        displayName = 'Başlangıç'
+        displayName = 'Getting Started'
         break
       case 'api':
         displayName = 'API'
@@ -66,12 +66,12 @@ const handleLinkKeyDown = (path: string, event: KeyboardEvent) => {
                     to="/" 
                     class="flex items-center px-3 py-2 text-sm font-medium text-gray-900 dark:text-gray-100 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
                     tabindex="0"
-                    aria-label="Ana sayfaya git"
+                    aria-label="Go to home"
                     @click="handleLinkClick"
                     @keydown="handleLinkKeyDown('/', $event)"
                 >
                     <span class="mr-2">🏠</span>
-                    Ana Sayfa
+                    Home
                 </NuxtLink>
             </div>
 
@@ -102,8 +102,8 @@ const handleLinkKeyDown = (path: string, event: KeyboardEvent) => {
             </div>
 
             <div v-else class="mb-6">
-                <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">İçerikler</h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400 px-3 py-2">Henüz içerik bulunmuyor.</p>
+                <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">Content</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400 px-3 py-2">No content found.</p>
             </div>
         </div>
     </div>

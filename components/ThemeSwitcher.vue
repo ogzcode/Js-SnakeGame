@@ -3,7 +3,7 @@
     @click="handleToggle"
     @keydown.enter="handleToggle"
     @keydown.space.prevent="handleToggle"
-    :aria-label="isDark ? 'Açık temaya geç' : 'Koyu temaya geç'"
+    :aria-label="isDark ? 'Switch to light theme' : 'Switch to dark theme'"
     tabindex="0"
     class="relative inline-flex items-center justify-center w-10 h-10 rounded-lg border border-gray-300 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200 dark:bg-gray-800 dark:border-gray-600 dark:hover:bg-gray-700"
   >
