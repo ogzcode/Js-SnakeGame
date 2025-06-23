@@ -48,7 +48,7 @@ watch(() => route.path, () => {
 </script>
 
 <template>
-  <div class="p-4 lg:p-6 border border-t-0 border-dashed border-gray-200 dark:border-gray-700">
+  <div class="p-4 lg:p-6">
     <!-- Başlık -->
     <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
         Table of Contents

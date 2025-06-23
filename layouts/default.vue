@@ -53,7 +53,7 @@ onUnmounted(() => {
         
 
         
-        <div class="max-w-7xl mx-auto flex relative">
+        <div class="max-w-[96rem] mx-auto flex relative">
             <div 
                 :class="[
                     'bg-white dark:bg-gray-900 transition-transform duration-300 ease-in-out',
@@ -66,13 +66,13 @@ onUnmounted(() => {
                 <Sidebar />
             </div>
 
-            <div class="flex-1 min-w-0">
-                <main class="max-w-4xl mx-auto py-4 px-6">
+            <div class="flex-1 min-w-0 ">
+                <main class="py-2 px-8">
                     <slot />
                 </main>
             </div>
 
-            <div class="hidden xl:block w-64 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto shrink-0">
+            <div class="hidden xl:block w-64 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto shrink-0 border border-t-0 border-l-0 border-dashed border-gray-200 dark:border-gray-700">
                 <TableOfContents />
             </div>
         </div>

@@ -15,7 +15,7 @@ const handleMenuKeyDown = (event: KeyboardEvent) => {
 
 <template>
     <div class="bg-white dark:bg-gray-900 sticky top-0 z-30">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border border-t-0 border-dashed border-gray-200 dark:border-gray-700">
+        <div class="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-8 border border-t-0 border-dashed border-gray-200 dark:border-gray-700">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center space-x-4">
                     <button

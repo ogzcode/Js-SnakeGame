@@ -26,7 +26,7 @@ useSeoMeta({
 
 <template>
     <div class="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
-        <div class="max-w-4xl mx-auto px-6 py-0">
+        <div class="mx-auto">
             <article class="prose prose-lg max-w-none">
                 <ContentRenderer 
                     v-if="page" 
