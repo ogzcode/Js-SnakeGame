@@ -2,6 +2,7 @@
 import Sidebar from '~/components/layout/Sidebar.vue';
 import TableOfContents from '~/components/layout/TableOfContents.vue';
 import Topbar from '~/components/layout/Topbar.vue';
+import Footer from '~/components/layout/Footer.vue';
 
 const { isSidebarOpen, isMobile, closeSidebar, setMobile } = useSidebar()
 
@@ -67,16 +68,15 @@ onUnmounted(() => {
             </div>
 
             <div class="flex-1 min-w-0 ">
-                <main class="py-2 px-8">
+                <main class="py-2 px-8 mb-8">
                     <slot />
                 </main>
+                <Footer />
             </div>
 
-            <div class="hidden xl:block w-64 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto shrink-0 border border-t-0 border-l-0 border-dashed border-gray-200 dark:border-gray-700">
+            <div class="hidden xl:block w-64 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto shrink-0">
                 <TableOfContents />
             </div>
         </div>
-        
-
     </div>
 </template>
