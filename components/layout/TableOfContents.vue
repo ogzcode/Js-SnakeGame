@@ -4,7 +4,6 @@ import type { TocItem } from '~/composables/useToc'
 const { tocItems, activeSection, scrollToSection } = useToc('main')
 const route = useRoute()
 
-// Mobile TOC modal kapatma için parent'tan emit
 const emit = defineEmits<{
   closeToc: []
 }>()
@@ -12,7 +11,6 @@ const emit = defineEmits<{
 const handleSectionClick = (anchor: string, event: Event) => {
   event.preventDefault()
   scrollToSection(anchor)
-  // Mobile'da modal'ı kapat
   emit('closeToc')
 }
 
@@ -20,7 +18,6 @@ const handleKeyDown = (anchor: string, event: KeyboardEvent) => {
   if (event.key === 'Enter' || event.key === ' ') {
     event.preventDefault()
     scrollToSection(anchor)
-    // Mobile'da modal'ı kapat
     emit('closeToc')
   }
 }
@@ -31,12 +28,12 @@ const isActive = (id: string): boolean => {
 
 const getIndentClass = (level: number): string => {
   const indentMap: Record<number, string> = {
-    1: 'pl-0',
-    2: 'pl-3',
+    1: 'pl-2',
+    2: 'pl-4',
     3: 'pl-6',
-    4: 'pl-9',
-    5: 'pl-12',
-    6: 'pl-15'
+    4: 'pl-8',
+    5: 'pl-10',
+    6: 'pl-12'
   }
   return indentMap[level] || 'pl-0'
 }
@@ -49,22 +46,21 @@ watch(() => route.path, () => {
 
 <template>
   <div class="p-4 lg:p-6">
-    <!-- Başlık -->
     <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
         Table of Contents
     </h3>
     
-    <nav v-if="tocItems.length > 0" class="space-y-1">
+    <nav v-if="tocItems.length > 0" class="space-y-1 border-l border-gray-200 dark:border-gray-700">
       <a
         v-for="item in tocItems"
         :key="item.id"
         :href="item.anchor"
         :class="[
-          'block text-sm transition-colors duration-200 py-1 px-2 rounded',
+          'block text-sm py-1 -ml-px border-l-2 transition-colors duration-200',
           getIndentClass(item.level),
           isActive(item.id) 
-            ? 'text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/50 font-medium border-l-2 border-blue-600 dark:border-blue-400' 
-            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700/50'
+            ? 'text-pink-500 dark:text-pink-400 border-pink-500 dark:border-pink-400 font-medium' 
+            : 'text-gray-500 dark:text-gray-400 border-transparent hover:border-gray-400 dark:hover:border-gray-500 hover:text-gray-900 dark:hover:text-white'
         ]"
         :aria-label="`Go to ${item.text}`"
         tabindex="0"
@@ -75,7 +71,6 @@ watch(() => route.path, () => {
       </a>
     </nav>
     
-    <!-- Boş durumda gösterilecek -->
     <div v-else class="text-sm text-gray-500 dark:text-gray-400">
       No headings found in this page.
     </div>
