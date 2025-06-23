@@ -59,7 +59,7 @@ const handleLinkKeyDown = (path: string, event: KeyboardEvent) => {
 </script>
 
 <template>
-    <div class="h-full border border-t-0 border-dashed border-gray-200 dark:border-gray-700">
+    <div class="h-full border-r border-gray-200 dark:border-gray-700">
         <div class="p-4">
             <div class="mb-6">
                 <NuxtLink 

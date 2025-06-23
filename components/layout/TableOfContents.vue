@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { TocItem } from '~/composables/useToc'
-
 const { tocItems, activeSection, scrollToSection } = useToc('main')
 const route = useRoute()
 
