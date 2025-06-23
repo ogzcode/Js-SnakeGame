@@ -4,15 +4,24 @@ import type { TocItem } from '~/composables/useToc'
 const { tocItems, activeSection, scrollToSection } = useToc('main')
 const route = useRoute()
 
+// Mobile TOC modal kapatma için parent'tan emit
+const emit = defineEmits<{
+  closeToc: []
+}>()
+
 const handleSectionClick = (anchor: string, event: Event) => {
   event.preventDefault()
   scrollToSection(anchor)
+  // Mobile'da modal'ı kapat
+  emit('closeToc')
 }
 
 const handleKeyDown = (anchor: string, event: KeyboardEvent) => {
   if (event.key === 'Enter' || event.key === ' ') {
     event.preventDefault()
     scrollToSection(anchor)
+    // Mobile'da modal'ı kapat
+    emit('closeToc')
   }
 }
 
@@ -39,7 +48,12 @@ watch(() => route.path, () => {
 </script>
 
 <template>
-  <div class="p-6">    
+  <div class="p-4 lg:p-6 border border-t-0 border-dashed border-gray-200 dark:border-gray-700">
+    <!-- Başlık -->
+    <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+      İçindekiler
+    </h3>
+    
     <nav v-if="tocItems.length > 0" class="space-y-1">
       <a
         v-for="item in tocItems"
@@ -60,5 +74,10 @@ watch(() => route.path, () => {
         {{ item.text }}
       </a>
     </nav>
+    
+    <!-- Boş durumda gösterilecek -->
+    <div v-else class="text-sm text-gray-500 dark:text-gray-400">
+      Bu sayfada başlık bulunmuyor.
+    </div>
   </div>
 </template> 
