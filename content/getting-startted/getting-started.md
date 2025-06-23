@@ -1,6 +1,8 @@
 ---
-title: Başlangıç Rehberi
+title: Başlangıç Rehberii
 description: Bu dokümantasyon sistemi Nuxt Content kullanarak oluşturulmuştur.
+category: Başlangıç
+order: 1
 ---
 
 # Başlangıç Rehberi

@@ -1,6 +1,8 @@
 ---
 title: API Referansı
 description: Bu bölümde mevcut API endpoint'lerini bulabilirsiniz.
+category: API
+order: 2
 ---
 
 # API Referansı
