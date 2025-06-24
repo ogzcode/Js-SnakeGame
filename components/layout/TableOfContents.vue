@@ -44,11 +44,11 @@ watch(() => route.path, () => {
 
 <template>
   <div class="p-4 lg:p-6">
-    <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+            <h3 class="text-xs font-semibold text-stone-500 dark:text-stone-400 uppercase tracking-wider mb-3">
         Table of Contents
     </h3>
     
-    <nav v-if="tocItems.length > 0" class="space-y-1 border-l border-gray-200 dark:border-gray-700">
+            <nav v-if="tocItems.length > 0" class="space-y-1 border-l border-stone-200 dark:border-stone-700">
       <a
         v-for="item in tocItems"
         :key="item.id"
@@ -58,7 +58,7 @@ watch(() => route.path, () => {
           getIndentClass(item.level),
           isActive(item.id) 
             ? 'text-pink-500 dark:text-pink-400 border-pink-500 dark:border-pink-400 font-medium' 
-            : 'text-gray-500 dark:text-gray-400 border-transparent hover:border-gray-400 dark:hover:border-gray-500 hover:text-gray-900 dark:hover:text-white'
+                            : 'text-stone-500 dark:text-stone-400 border-transparent hover:border-stone-400 dark:hover:border-stone-500 hover:text-stone-900 dark:hover:text-white'
         ]"
         :aria-label="`Go to ${item.text}`"
         tabindex="0"
@@ -69,7 +69,7 @@ watch(() => route.path, () => {
       </a>
     </nav>
     
-    <div v-else class="text-sm text-gray-500 dark:text-gray-400">
+            <div v-else class="text-sm text-stone-500 dark:text-stone-400">
       No headings found in this page.
     </div>
   </div>

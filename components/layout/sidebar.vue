@@ -79,14 +79,14 @@ const isActive = (path: string): boolean => {
 </script>
 
 <template>
-    <div class="h-full border-r border-gray-200 dark:border-gray-700">
+    <div class="h-full border-r border-stone-200 dark:border-stone-700">
         <div class="p-4">
             <div v-if="navigation && navigation.length > 0">
                 <div v-for="(group, index) in groupedContent" :key="group.name" class="mb-6">
-                    <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+                    <h3 class="text-xs font-semibold text-stone-500 dark:text-stone-400 uppercase tracking-wider mb-3">
                         {{ group.name }}
                     </h3>
-                    <nav class="space-y-1 border-l border-gray-200 dark:border-gray-700">
+                    <nav class="space-y-1 border-l border-stone-200 dark:border-stone-700">
                         <NuxtLink 
                             v-for="page in group.pages" 
                             :key="page.path"
@@ -95,7 +95,7 @@ const isActive = (path: string): boolean => {
                                 'block text-sm py-2 pl-4 -ml-px border-l-2 transition-colors duration-200',
                                 isActive(page.path) 
                                     ? 'text-pink-500 dark:text-pink-400 border-pink-500 dark:border-pink-400 font-medium' 
-                                    : 'text-gray-700 dark:text-gray-300 border-transparent hover:border-gray-400 dark:hover:border-gray-500 hover:text-gray-900 dark:hover:text-white'
+                                    : 'text-stone-700 dark:text-stone-300 border-transparent hover:border-stone-400 dark:hover:border-stone-500 hover:text-stone-900 dark:hover:text-white'
                             ]"
                             tabindex="0"
                             :aria-label="`${page.title || page.path} sayfasına git`"
@@ -106,13 +106,13 @@ const isActive = (path: string): boolean => {
                         </NuxtLink>
                     </nav>
                     <!-- Grup ayırıcı çizgi (son grup değilse) -->
-                    <div v-if="index < groupedContent.length - 1" class="mt-6 border-b border-gray-200 dark:border-gray-700"></div>
+                    <div v-if="index < groupedContent.length - 1" class="mt-6 border-b border-stone-200 dark:border-stone-700"></div>
                 </div>
             </div>
 
             <div v-else class="mb-6">
-                <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">Content</h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400 px-3 py-2">No content found.</p>
+                <h3 class="text-xs font-semibold text-stone-500 dark:text-stone-400 uppercase tracking-wider mb-3">Content</h3>
+                <p class="text-sm text-stone-500 dark:text-stone-400 px-3 py-2">No content found.</p>
             </div>
         </div>
     </div>

@@ -14,12 +14,12 @@ const handleMenuKeyDown = (event: KeyboardEvent) => {
 </script>
 
 <template>
-    <div class="bg-white dark:bg-gray-900 sticky top-0 z-30">
-        <div class="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-8 border-b border-gray-200 dark:border-gray-700">
+        <div class="bg-white dark:bg-stone-900 sticky top-0 z-30">
+      <div class="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-8 border-b border-stone-200 dark:border-stone-700">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center space-x-4">
                     <button
-                        class="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
+                        class="md:hidden p-2 rounded-md text-stone-600 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors duration-200"
                         aria-label="Open/Close menu"
                         tabindex="0"
                         @click="handleMenuClick"
@@ -30,7 +30,7 @@ const handleMenuKeyDown = (event: KeyboardEvent) => {
                         </svg>
                     </button>
                     
-                    <div class="font-semibold text-gray-900 dark:text-white">
+                    <div class="font-semibold text-stone-900 dark:text-white">
                         Documentation
                     </div>
                 </div>
