@@ -40,7 +40,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div class="bg-white dark:bg-gray-900 min-h-screen">
+    <div class="bg-white dark:bg-stone-900 min-h-screen">
         <Topbar />
         
         <div 
@@ -57,7 +57,7 @@ onUnmounted(() => {
         <div class="max-w-[96rem] mx-auto flex relative">
             <div 
                 :class="[
-                    'bg-white dark:bg-gray-900 transition-transform duration-300 ease-in-out',
+                    'bg-white dark:bg-stone-900 transition-transform duration-300 ease-in-out',
                     'md:w-64 md:sticky md:top-16 md:h-[calc(100vh-4rem)] md:overflow-y-auto md:shrink-0 md:translate-x-0',
                     'md:relative md:z-auto',
                     'fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 z-30 overflow-y-auto sidebar-mobile',
