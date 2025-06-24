@@ -19,6 +19,7 @@ Get all users.
 - `offset` (optional): Start point
 
 **Example Response:**
+
 ```json
 {
   "users": [
@@ -55,7 +56,7 @@ curl -H "Authorization: Bearer YOUR_TOKEN" \
 ## Error Codes
 
 | Code | Description |
-|-----|----------|
+|------|-------------|
 | 400 | Invalid request |
 | 401 | Authorization error |
 | 404 | Resource not found |
