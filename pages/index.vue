@@ -6,13 +6,13 @@ definePageMeta({
 })
 
 const handleGetStarted = () => {
-  navigateTo('/getting-startted/getting-started')
+  navigateTo('/get-started/introduction')
     }
 
 const handleGetStartedKeyDown = (event: KeyboardEvent) => {
   if (event.key === 'Enter') {
     event.preventDefault()
-    navigateTo('/getting-startted/getting-started')
+    navigateTo('/get-started/introduction')
   }
 }
 </script>
