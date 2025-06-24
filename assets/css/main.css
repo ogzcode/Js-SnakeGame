@@ -12,7 +12,16 @@
   margin-bottom: 1.5rem;
   margin-top: 0.5rem;
   padding-bottom: 0.75rem;
-  color: #1f2937; /* gray-800 - daha koyu */
+  color: #1c1917; /* stone-800 - daha koyu */
+}
+
+.prose h1:hover,
+.prose h2:hover,
+.prose h3:hover,
+.prose h4:hover,
+.prose h5:hover,
+.prose h6:hover {
+  text-decoration: none !important;
 }
 
 .prose h2 {
@@ -21,7 +30,8 @@
   margin-bottom: 1rem;
   margin-top: 2rem;
   padding-bottom: 0.5rem;
-  color: #1f2937; /* gray-800 - daha koyu */
+  color: #1c1917; /* stone-800 - daha koyu */
+  border-bottom: 1px solid #e7e5e4; /* stone-200 */
 }
 
 .prose h3 {
@@ -29,23 +39,24 @@
   font-weight: 700;
   margin-bottom: 0.75rem;
   margin-top: 1.5rem;
-  color: #1f2937; /* gray-800 - daha koyu */
+  color: #1c1917; /* stone-800 - daha koyu */
 }
 
 .prose pre {
-  background-color: #f9fafb; /* gray-50 */
-  color: #1f2937; /* gray-800 */
+  background-color: #fafaf9; /* stone-50 */
+  color: #1c1917; /* stone-800 */
   border-radius: 0.5rem;
   padding: 1rem;
   overflow-x: auto;
   margin-bottom: 1rem;
+  margin-top: 1.5rem; /* JSON kod bloğu için margin-top */
   font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', monospace;
-  border: 1px solid #e5e7eb; /* gray-200 */
+  border: 1px solid #e7e5e4; /* stone-200 */
 }
 
 .prose code {
-  background-color: #f3f4f6; /* gray-100 */
-  color: #1f2937; /* gray-800 */
+  background-color: #f5f5f4; /* stone-100 */
+  color: #1c1917; /* stone-800 */
   padding: 0.125rem 0.5rem;
   border-radius: 0.25rem;
   font-size: 0.875rem;
@@ -54,7 +65,7 @@
 
 .prose pre code {
   background-color: transparent;
-  color: #1f2937; /* gray-800 */
+  color: #1c1917; /* stone-800 */
   padding: 0;
 }
 
@@ -69,23 +80,36 @@
 .prose table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid #e5e7eb;
-  margin: 1rem 0;
+  border: 1px solid #e7e5e4; /* stone-200 */
+  margin: 2rem 0;
   border-radius: 0.5rem;
   overflow: hidden;
 }
 
 .prose th {
-  background-color: #f9fafb;
+  background-color: #ffffff; /* beyaz - hücrelerle aynı */
+  color: #1c1917; /* stone-800 - normal yazı rengi */
   padding: 0.75rem;
   text-align: left;
-  font-weight: 700;
-  border-bottom: 1px solid #e5e7eb;
+  font-weight: 600; /* header için biraz daha kalın */
+  font-size: 0.875rem;
+  border: 1px solid #e7e5e4; /* stone-200 - tüm taraflar */
 }
 
 .prose td {
   padding: 0.75rem;
-  border-bottom: 1px solid #f3f4f6;
+  border: 1px solid #e7e5e4; /* stone-200 - tüm taraflar */
+  vertical-align: top;
+  background-color: #ffffff; /* beyaz */
+}
+
+.prose td code {
+  background-color: #f5f5f4; /* stone-100 */
+  color: #1c1917; /* stone-800 */
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
 }
 
 .prose tr:last-child td {
@@ -93,13 +117,50 @@
 }
 
 .prose a {
-  color: #1f2937; 
+  color: #1c1917; 
   text-decoration: none;
 }
 
 .prose a:hover {
-  color: #1f2937; 
-  text-decoration: underline; 
+  color: #1c1917; 
+}
+
+/* Liste stilleri */
+.prose ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.prose ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.prose ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #78716c; /* stone-500 */
+  font-weight: bold;
+}
+
+.prose ul li strong {
+  color: #1c1917; /* stone-800 */
+}
+
+/* Tab bileşenleri için margin */
+.prose .border.border-stone-200 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* TabView bileşeni için daha spesifik selector */
+.prose div[class*="border-stone-200"][class*="rounded-lg"] {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Mobile responsive styles */
@@ -151,6 +212,12 @@
     padding: 0.5rem 0.75rem;
     margin: 0.75rem 0;
   }
+  
+  .prose ul li {
+    padding-left: 1.25rem;
+    margin-bottom: 0.375rem;
+    font-size: 0.875rem;
+  }
 }
 
 /* Tablet styles */
@@ -175,30 +242,38 @@
 /* Dark mode - class-based approach */
 .dark .prose h1,
 .dark .prose h2,
-.dark .prose h3 {
-  color: #f3f4f6; /* gray-100 - dark mode'da açık */
+.dark .prose h3,
+.dark .prose h4,
+.dark .prose h5,
+.dark .prose h6 {
+  color: #ffffff !important; /* beyaz */
+}
+
+.dark .prose h2 {
+  border-bottom-color: #57534e; /* stone-600 */
 }
 
 .dark .prose p,
 .dark .prose li,
 .dark .prose {
-  color: #d1d5db; /* gray-300 */
+  color: #d6d3d1; /* stone-300 */
 }
 
 .dark .prose pre {
-  background-color: #1f2937; /* gray-800 */
-  color: #f3f4f6; /* gray-100 */
-  border-color: #374151; /* gray-700 */
+  background-color: #1c1917; /* stone-800 */
+  color: #f5f5f4; /* stone-100 */
+  border-color: #44403c; /* stone-700 */
+  margin-top: 1.5rem; /* JSON kod bloğu için margin-top dark mode */
 }
 
 .dark .prose code {
-  background-color: #374151; /* gray-700 */
-  color: #e5e7eb; /* gray-200 */
+  background-color: #44403c; /* stone-700 */
+  color: #e7e5e4; /* stone-200 */
 }
 
 .dark .prose pre code {
   background-color: transparent;
-  color: #f3f4f6; /* gray-100 */
+  color: #f5f5f4; /* stone-100 */
 }
 
 .dark .prose blockquote {
@@ -208,28 +283,42 @@
 }
 
 .dark .prose table {
-  border-color: #4b5563;
+  border-color: #44403c; /* stone-700 */
 }
 
 .dark .prose th {
-  background-color: #374151;
-  color: #f3f4f6;
-  border-color: #4b5563;
+  background-color: #1c1917; /* stone-800 - hücrelerle aynı */
+  color: #e7e5e4; /* stone-200 */
+  border: 1px solid #44403c; /* stone-700 - tüm taraflar */
 }
 
 .dark .prose td {
-  border-color: #374151;
-  color: #d1d5db;
+  border: 1px solid #44403c; /* stone-700 - tüm taraflar */
+  color: #d6d3d1; /* stone-300 */
+  background-color: #1c1917; /* stone-800 */
+}
+
+.dark .prose td code {
+  background-color: #44403c; /* stone-700 */
+  color: #e7e5e4; /* stone-200 */
 }
 
 .dark .prose a {
-  color: #60a5fa; /* blue-400 */
+  color: oklch(98.5% 0.001 106.423); /* stone-50 */
   text-decoration: none; 
 }
 
 .dark .prose a:hover {
-  color: #93c5fd; /* blue-300 */
-  text-decoration: underline; 
+  color: oklch(86.9% 0.005 56.366); /* stone-400 */
+}
+
+/* Dark mode liste stilleri */
+.dark .prose ul li::before {
+  color: #a8a29e; /* stone-400 */
+}
+
+.dark .prose ul li strong {
+  color: #ffffff; /* beyaz */
 }
 
 /* Scroll behavior for smooth navigation */
@@ -240,7 +329,7 @@ html {
 /* Hide scrollbar for mobile overlay sidebar */
 .sidebar-mobile {
   scrollbar-width: thin;
-  scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+  scrollbar-color: rgba(168, 162, 158, 0.5) transparent;
 }
 
 .sidebar-mobile::-webkit-scrollbar {
@@ -252,7 +341,7 @@ html {
 }
 
 .sidebar-mobile::-webkit-scrollbar-thumb {
-  background-color: rgba(156, 163, 175, 0.5);
+  background-color: rgba(168, 162, 158, 0.5);
   border-radius: 2px;
 }
 
