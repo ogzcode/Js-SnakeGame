@@ -19,5 +19,9 @@ export default defineNuxtConfig({
         h6: true
       }
     }
+  },
+  components: {
+    global: true,
+    dirs: ['~/components']
   }
 })
