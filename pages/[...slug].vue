@@ -25,7 +25,7 @@ useSeoMeta({
 </script>
 
 <template>
-    <div class="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
+            <div class="min-h-screen bg-white dark:bg-stone-900 transition-colors duration-200">
         <div class="mx-auto">
             <article class="prose prose-lg max-w-none">
                 <ContentRenderer 
@@ -34,7 +34,7 @@ useSeoMeta({
                     class="prose prose-gray max-w-none"
                 />
                 <div v-else class="text-center py-8">
-                    <p class="text-gray-500 dark:text-gray-400">İçerik bulunamadı</p>
+                    <p class="text-stone-500 dark:text-stone-400">İçerik bulunamadı</p>
                 </div>
             </article>
         </div>
