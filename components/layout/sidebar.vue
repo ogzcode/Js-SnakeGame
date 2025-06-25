@@ -61,6 +61,19 @@ const groupedContent = computed(() => {
   return groupDetails
 })
 
+const getGroupIcon = (groupName: string): string => {
+  switch (groupName) {
+    case 'Getting Started':
+      return 'heroicons:rocket-launch'
+    case 'API':
+      return 'heroicons:code-bracket'
+    case 'Home':
+      return 'heroicons:home'
+    default:
+      return 'heroicons:document-text'
+  }
+}
+
 const handleLinkClick = () => {
   closeSidebar()
 }
@@ -83,16 +96,17 @@ const isActive = (path: string): boolean => {
         <div class="p-4">
             <div v-if="navigation && navigation.length > 0">
                 <div v-for="(group, index) in groupedContent" :key="group.name" class="mb-6">
-                    <h3 class="text-xs font-semibold text-stone-500 dark:text-stone-400 uppercase tracking-wider mb-3">
-                        {{ group.name }}
-                    </h3>
+                    <div class="font-semibold text-stone-600 dark:text-stone-400 tracking-wider mb-3 flex items-center gap-2">
+                        <Icon :name="getGroupIcon(group.name)" class="w-6 h-6" />
+                        <h3 class="text-sm">{{ group.name }}</h3>
+                    </div>
                     <nav class="space-y-1 border-l border-stone-200 dark:border-stone-700">
                         <NuxtLink 
                             v-for="page in group.pages" 
                             :key="page.path"
                             :to="page.path" 
                             :class="[
-                                'block text-sm py-2 pl-4 -ml-px border-l-2 transition-colors duration-200',
+                                'block font-medium text-sm py-2 pl-4 -ml-px border-l-2 transition-colors duration-200',
                                 isActive(page.path) 
                                     ? 'text-pink-500 dark:text-pink-400 border-pink-500 dark:border-pink-400 font-medium' 
                                     : 'text-stone-700 dark:text-stone-300 border-transparent hover:border-stone-400 dark:hover:border-stone-500 hover:text-stone-900 dark:hover:text-white'
@@ -105,7 +119,6 @@ const isActive = (path: string): boolean => {
                             <span class="truncate">{{ page.title || page.path }}</span>
                         </NuxtLink>
                     </nav>
-                    <!-- Grup ayırıcı çizgi (son grup değilse) -->
                     <div v-if="index < groupedContent.length - 1" class="mt-6 border-b border-stone-200 dark:border-stone-700"></div>
                 </div>
             </div>
