@@ -3,7 +3,12 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-  modules: ["@nuxt/content", "@nuxt/icon"],
+  modules: ["@nuxt/content", "@nuxt/icon", '@nuxt/fonts'],
+  fonts: {
+    families: [
+      { name: 'Quicksand', provider: 'google' }
+    ]
+  },
   vite: {
     plugins: [tailwindcss()],
   },
