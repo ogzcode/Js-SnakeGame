@@ -26,7 +26,7 @@ const handleGetStartedKeyDown = (event: KeyboardEvent) => {
 
             <div class="text-center mb-16">
                 <h1 class="text-5xl md:text-6xl font-bold text-stone-800 dark:text-stone-100 mb-6">
-                    Doc Name <span class="text-blue-600 dark:text-blue-400">Center</span>
+                    Doc Name <span class="text-pink-600 dark:text-pink-400">Center</span>
                 </h1>
                 <p class="text-xl text-stone-600 dark:text-stone-300 mb-8 max-w-2xl mx-auto">
                     Doc Name Center is a documentation center for Doc Name. It is a platform for storing and sharing documentation for Doc Name.    
@@ -35,7 +35,7 @@ const handleGetStartedKeyDown = (event: KeyboardEvent) => {
                 <button 
                     @click="handleGetStarted"
                     @keydown="handleGetStartedKeyDown"
-                    class="inline-flex items-center px-8 py-4 text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                    class="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-pink-600 hover:bg-pink-700 dark:bg-pink-500 dark:hover:bg-pink-600 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                     tabindex="0"
                     aria-label="Get Started"
                 >
