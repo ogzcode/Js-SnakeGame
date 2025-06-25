@@ -39,7 +39,7 @@ export const useToc = (containerSelector: string = 'main') => {
       })
 
       tocItems.value = items
-    }, 100)
+    }, 10)
   }
 
   const slugify = (text: string): string => {

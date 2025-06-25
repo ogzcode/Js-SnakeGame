@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Global font family */
 * {
   font-family: 'Quicksand', sans-serif;
 }
@@ -10,7 +9,6 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-/* Dokümantasyon sayfası için özel stiller */
 .prose {
   max-width: none !important;
 }
@@ -57,15 +55,15 @@ body {
   padding: 1rem;
   overflow-x: auto;
   margin-bottom: 0.5rem;
-  margin-top: 0.5rem; /* JSON kod bloğu için margin-top */
+  margin-top: 0.5rem;
   font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', monospace;
-  border: 1px solid #e7e5e4; /* stone-200 */
+  border: 1px solid #e7e5e4;
   font-weight: 600;
 }
 
 .prose code {
-  background-color: #f5f5f4; /* stone-100 */
-  color: #1c1917; /* stone-800 */
+  background-color: #f5f5f4;
+  color: #1c1917;
   padding: 0.125rem 0.5rem;
   border-radius: 0.25rem;
   font-size: 0.875rem;
@@ -77,13 +75,13 @@ body {
 
 .prose pre code {
   background-color: transparent;
-  color: #1c1917; /* stone-800 */
+  color: #1c1917;
   padding: 0;
 }
 
 .prose blockquote {
-  border-left: 4px solid #f59e0b; /* amber-500 */
-  background-color: #fffbeb; /* amber-50 */
+  border-left: 4px solid #f59e0b;
+  background-color: #fffbeb;
   padding: 0.75rem 1rem;
   margin: 1rem 0;
   border-radius: 0 0.5rem 0.5rem 0;
@@ -95,46 +93,44 @@ body {
 }
 
 .prose th {
-  background-color: #ffffff; /* beyaz - hücrelerle aynı */
-  color: #1c1917; /* stone-800 - normal yazı rengi */
+  background-color: #ffffff;
+  color: #1c1917;
   padding: 0.75rem;
   text-align: left;
-  font-weight: 600; /* header için biraz daha kalın */
+  font-weight: 600;
   font-size: 0.875rem;
-  border: 1px solid #e7e5e4; /* stone-200 - tüm taraflar */
+  border: 1px solid #e7e5e4;
 }
 
 .prose td {
   padding: 0.75rem;
-  border: 1px solid #e7e5e4; /* stone-200 - tüm taraflar */
+  border: 1px solid #e7e5e4;
   vertical-align: top;
-  background-color: #ffffff; /* beyaz */
+  background-color: #ffffff;
 }
 
 .prose td code {
-  background-color: #f5f5f4; /* stone-100 */
-  color: #1c1917; /* stone-800 */
+  background-color: #f5f5f4;
+  color: #1c1917;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   font-size: 0.8125rem;
   font-weight: 600;
 }
 
-/* Default link styles - with underline and darker color */
 .prose a {
-  color: #0c0a09; /* stone-900 - daha koyu */
+  color: #0c0a09;
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: rgba(12, 10, 9, 0.3);
 }
 
 .prose a:hover {
-  color: #000000; /* siyah */
+  color: #000000;
   text-decoration: underline;
   text-decoration-color: rgba(0, 0, 0, 0.6);
 }
 
-/* Links inside headings - no underline, current color */
 .prose h1 a,
 .prose h2 a,
 .prose h3 a,
@@ -155,7 +151,6 @@ body {
   text-decoration: none;
 }
 
-/* Liste stilleri */
 .prose ul {
   list-style: none;
   padding-left: 0;
@@ -173,27 +168,24 @@ body {
   content: "•";
   position: absolute;
   left: 0;
-  color: #78716c; /* stone-500 */
+  color: #78716c;
   font-weight: bold;
 }
 
 .prose ul li strong {
-  color: #1c1917; /* stone-800 */
+  color: #1c1917;
 }
 
-/* Tab bileşenleri için margin */
 .prose .border.border-stone-200 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-/* TabView bileşeni için daha spesifik selector */
 .prose div[class*="border-stone-200"][class*="rounded-lg"] {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-/* Mobile responsive styles */
 @media (max-width: 768px) {
   .prose {
     font-size: 0.875rem;
@@ -288,79 +280,77 @@ body {
 .dark .prose h4,
 .dark .prose h5,
 .dark .prose h6 {
-  color: #ffffff !important; /* beyaz */
+  color: #ffffff !important;
 }
 
 .dark .prose h2 {
-  border-bottom-color: #57534e; /* stone-600 */
+  border-bottom-color: #57534e;
 }
 
 .dark .prose p,
 .dark .prose li,
 .dark .prose {
-  color: #d6d3d1; /* stone-300 */
+  color: #d6d3d1;
 }
 
 .dark .prose pre {
-  background-color: #1c1917; /* stone-800 */
-  color: #f5f5f4; /* stone-100 */
-  border-color: #44403c; /* stone-700 */
-  margin-top: 1.5rem; /* JSON kod bloğu için margin-top dark mode */
+  background-color: #1c1917;
+  color: #f5f5f4;
+  border-color: #44403c;
+  margin-top: 1.5rem;
 }
 
 .dark .prose code {
-  background-color: #44403c; /* stone-700 */
-  color: #e7e5e4; /* stone-200 */
+  background-color: #44403c;
+  color: #e7e5e4;
 }
 
 .dark .prose pre code {
   background-color: transparent;
-  color: #f5f5f4; /* stone-100 */
+  color: #f5f5f4;
 }
 
 .dark .prose blockquote {
-  background-color: rgba(245, 158, 11, 0.1); /* amber with opacity */
-  color: #fbbf24; /* amber-400 */
-  border-left-color: #f59e0b; /* amber-500 */
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #fbbf24;
+  border-left-color: #f59e0b;
 }
 
 .dark .prose table {
-  border-color: #44403c; /* stone-700 */
+  border-color: #44403c;
 }
 
 .dark .prose th {
-  background-color: #1c1917; /* stone-800 - hücrelerle aynı */
-  color: #e7e5e4; /* stone-200 */
-  border: 1px solid #44403c; /* stone-700 - tüm taraflar */
+  background-color: #1c1917;
+  color: #e7e5e4;
+  border: 1px solid #44403c;
 }
 
 .dark .prose td {
-  border: 1px solid #44403c; /* stone-700 - tüm taraflar */
-  color: #d6d3d1; /* stone-300 */
-  background-color: #1c1917; /* stone-800 */
+  border: 1px solid #44403c;
+  color: #d6d3d1;
+  background-color: #1c1917;
 }
 
 .dark .prose td code {
-  background-color: #44403c; /* stone-700 */
-  color: #e7e5e4; /* stone-200 */
+  background-color: #44403c;
+  color: #e7e5e4;
   font-weight: 600;
 }
 
-/* Dark mode - Default link styles with underline and lighter color */
 .dark .prose a {
-  color: #f5f5f4; /* stone-100 - daha açık */
+  color: #f5f5f4;
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: rgba(245, 245, 244, 0.4);
 }
 
 .dark .prose a:hover {
-  color: #ffffff; /* beyaz */
+  color: #ffffff;
   text-decoration: underline;
   text-decoration-color: rgba(255, 255, 255, 0.7);
 }
 
-/* Dark mode - Links inside headings */
 .dark .prose h1 a,
 .dark .prose h2 a,
 .dark .prose h3 a,
@@ -381,21 +371,18 @@ body {
   text-decoration: none;
 }
 
-/* Dark mode liste stilleri */
 .dark .prose ul li::before {
-  color: #a8a29e; /* stone-400 */
+  color: #a8a29e;
 }
 
 .dark .prose ul li strong {
-  color: #ffffff; /* beyaz */
+  color: #ffffff;
 }
 
-/* Scroll behavior for smooth navigation */
 html {
   scroll-behavior: smooth;
 }
 
-/* Hide scrollbar for mobile overlay sidebar */
 .sidebar-mobile {
   scrollbar-width: thin;
   scrollbar-color: rgba(168, 162, 158, 0.5) transparent;
@@ -413,5 +400,3 @@ html {
   background-color: rgba(168, 162, 158, 0.5);
   border-radius: 2px;
 }
-
-/* Dark mode için media query'yi kaldırıp class-based approach kullanıyoruz */
